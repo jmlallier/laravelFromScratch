@@ -8,7 +8,7 @@
 
     <div class="row">
         @foreach ($posts as $post)
-            @include('post')
+            @include('posts.post')
         @endforeach
     </div>
 @endsection

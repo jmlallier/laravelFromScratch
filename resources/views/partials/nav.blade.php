@@ -2,15 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 py-4">
-                <h4 class="text-white">About</h4>
-                <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                <h4 class="text-white">I'm John-Michael</h4>
+                <p class="text-muted">A full-stack web developer and a passionate learner with an entrepreneurial mindset. I constantly iterate on personal and professional processes, workflows, and methods. I’m proficient in PHP, MySQL, JavaScript, AJAX, HTML, CSS, and various APIs. And I’m familiar with MVC frameworks (Laravel and Rails), WordPress, Git, Node, React, and Ruby on Rails.</p>
             </div>
             <div class="col-sm-4 py-4">
                 <h4 class="text-white">Contact</h4>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                    <li><a href="#" class="text-white">Like on Facebook</a></li>
-                    <li><a href="#" class="text-white">Email me</a></li>
+                    <li><a href="mailto:jmlallier@me.com" class="text-white">Email me</a></li>
                 </ul>
             </div>
         </div>
