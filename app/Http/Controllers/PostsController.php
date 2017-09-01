@@ -20,7 +20,13 @@ class PostsController extends Controller {
 	}
 
 	public function store() {
-		Post::create( request(['title', 'content', 'image']) );
+		$this->validate( request(), [
+			'title'   => 'required',
+			'content' => 'required',
+			'image'   => 'required',
+		] );
+
+		Post::create( request( [ 'title', 'content', 'image' ] ) );
 
 		return redirect( '/' );
 	}
