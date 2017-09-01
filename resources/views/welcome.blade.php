@@ -79,19 +79,8 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Hello, JM
+            Hello, {{$name}}
         </div>
-
-        <ul>
-            @if (!empty($tasks))
-                @foreach ($tasks as $task)
-                    <li>
-                        <h4>{{$task->title}}</h4>
-                        <p>{{$task->body}}</p>
-                    </li>
-                @endforeach
-            @endif
-        </ul>
     </div>
 </div>
 </body>

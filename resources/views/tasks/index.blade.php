@@ -85,7 +85,7 @@
         <div class='taskList'>
             @if (!empty($tasks))
                 @foreach ($tasks as $task)
-                        <div class='task'>{{$task->body}}</div>
+                    <div class='task'><a href='/tasks/{{$task->id}}'>{{$task->body}}</a></div>
                 @endforeach
             @endif
         </div>
