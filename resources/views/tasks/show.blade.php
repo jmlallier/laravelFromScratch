@@ -80,15 +80,8 @@
     <div class="content">
 
         <div class="title m-b-md">
-            Task
+            {{$task->body}}
         </div>
-
-        {{--@if (!empty($task))--}}
-            <div class='task'>
-                <h4>{{$task->title}}</h4>
-                <p>{{$task->body}}</p>
-            </div>
-        {{--@endif--}}
 
     </div>
 </div>

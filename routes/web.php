@@ -17,8 +17,8 @@ Route::get( '/', function() {
 	return view( 'welcome', compact( 'tasks' ) );
 } );
 
-Route::get( '/tasks/{task?}', function( $id ) {
-	if ( !empty( $id ) ) {
+Route::get( '/tasks/{task?}', function( $id = NULL ) {
+	if ( !is_null( $id ) ) {
 		$task = DB::table( 'tasks' )->find( $id );
 
 		return view( 'tasks.show', compact( 'task' ) );

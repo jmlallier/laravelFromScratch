@@ -82,16 +82,13 @@
             Tasks
         </div>
 
-        <ul>
+        <div class='taskList'>
             @if (!empty($tasks))
                 @foreach ($tasks as $task)
-                    <li>
-                        <h4>{{$task->title}}</h4>
-                        <p>{{$task->body}}</p>
-                    </li>
+                        <div class='task'>{{$task->body}}</div>
                 @endforeach
             @endif
-        </ul>
+        </div>
     </div>
 </div>
 </body>
