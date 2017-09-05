@@ -5,14 +5,19 @@ namespace App\Http\Controllers;
 use App\Post;
 
 class PostsController extends Controller {
+
+	public function __construct() {
+		$this->middleware( 'auth' )->except( [ 'index' ] );
+	}
+
 	public function index() {
 		$posts = Post::latest()->get();
 
 		return view( 'posts.index', compact( 'posts' ) );
 	}
 
-	public function show(Post $post) {
-		return view( 'posts.show', compact('post') );
+	public function show( Post $post ) {
+		return view( 'posts.show', compact( 'post' ) );
 	}
 
 	public function create() {
@@ -26,9 +31,11 @@ class PostsController extends Controller {
 			'image'   => 'required',
 		] );
 
-		Post::create( request( [ 'title', 'content', 'image' ] ) );
+		auth()->user()->publishPost(
+			$post = new Post( request( [ 'title', 'content', 'image' ] ) )
+		);
 
-		return redirect( '/' );
+		return redirect( "/posts/{$post->id}" );
 	}
 
 }

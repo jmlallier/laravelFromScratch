@@ -4,8 +4,8 @@ namespace App;
 
 class Post extends Model {
 
-	public function addComment( $content ) {
-		$this->comments()->create( compact( 'content' ) );
+	public function addComment( $content, $user_id ) {
+		$this->comments()->create( compact( 'content', 'user_id' ) );
 	}
 
 	public function comments() {

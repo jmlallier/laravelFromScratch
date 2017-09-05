@@ -16,7 +16,13 @@
 </div>
 <div class="navbar navbar-dark bg-dark">
     <div class="container d-flex justify-content-between">
-        <a href="/" class="navbar-brand">John-Michael</a>
+        @if (Auth::check())
+        <a href="/" class="navbar-brand">{{Auth::user()->name}}</a>
+        @else
+            <a href='/register'>Sign up</a>&nbsp;
+            or
+            <a href='/login'>Sign in</a>
+            @endif
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
